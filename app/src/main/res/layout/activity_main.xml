@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:background="@android:color/holo_green_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="green button" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Click Me"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/frame_layout"
+        app:layout_constraintEnd_toEndOf="@+id/frame_layout"
+        app:layout_constraintStart_toStartOf="@+id/frame_layout"
+        app:layout_constraintTop_toTopOf="@+id/frame_layout" />
+
+</android.support.constraint.ConstraintLayout>
